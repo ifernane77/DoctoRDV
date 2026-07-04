@@ -1,0 +1,25 @@
+# Système
+.DS_Store
+Thumbs.db
+
+# Environnement local
+.env
+
+# Logs
+*.log
+
+# Fichiers temporaires
+tmp/
+temp/
+
+# IDE
+.vscode/
+.idea/
+
+# Dépendances éventuelles
+vendor/
+node_modules/
+
+# Fichiers personnels
+*.bak
+*.old
