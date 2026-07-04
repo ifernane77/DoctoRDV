@@ -82,3 +82,12 @@ DoctoRDV/
 ├── database/
 ├── tests/
 └── preuves/
+
+## Avancement
+
+| Semaine | Travail réalisé | Statut |
+|---|---|---|
+| Semaine 1 | Cadrage du projet, objectifs, backlog initial et dépôt GitHub | Terminé |
+| Semaine 2 | Identification des acteurs, rôles, flux et architecture générale | Terminé |
+| Semaine 3 | Rédaction des cas d’utilisation et préparation de l’architecture applicative | Terminé |
+| Semaine 4 | Préparation de l’environnement technique, documentation d’installation, conventions de nommage et préparation de la future base de données | Terminé |

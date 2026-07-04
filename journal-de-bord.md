@@ -132,3 +132,46 @@ Le projet dispose maintenant d’une base fonctionnelle claire pour préparer la
 ### Lien avec le BTS SIO
 
 Cette semaine est directement liée à l’épreuve E6 SLAM, car elle prépare la conception d’une solution applicative.
+
+## Semaine 4 — Préparation de l’environnement technique
+
+### Objectif de la semaine
+
+L’objectif de cette semaine était de préparer l’environnement technique du projet DoctoRDV avant de commencer le développement.
+
+### Travail réalisé
+
+- Création du fichier `installation.md`.
+- Création du fichier `environnement-technique.md`.
+- Création du fichier `conventions-nommage.md`.
+- Préparation du dossier `database`.
+- Création du fichier `database/README.md`.
+- Création du fichier `database/schema-prevu.md`.
+- Mise à jour de la documentation du projet.
+
+### Difficultés rencontrées
+
+J’ai compris qu’il ne fallait pas commencer directement par le code.
+
+Avant le développement, il est important de préparer l’environnement, les choix techniques, l’organisation du projet et les conventions de nommage.
+
+### Résultat obtenu
+
+Le projet dispose maintenant d’une base technique préparée pour les prochaines étapes.
+
+Le développement PHP, la création réelle de la base MySQL et les tests locaux seront réalisés plus tard.
+
+### Preuves produites
+
+- `installation.md`
+- `environnement-technique.md`
+- `conventions-nommage.md`
+- `database/README.md`
+- `database/schema-prevu.md`
+- capture de l’arborescence VS Code
+- capture GitHub
+- commit Git
+
+### Lien avec le BTS SIO
+
+Cette semaine prépare l’épreuve E6 SLAM car elle organise l’environnement nécessaire au futur développement de l’application DoctoRDV.
