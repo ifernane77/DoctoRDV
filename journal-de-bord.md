@@ -175,3 +175,46 @@ Le développement PHP, la création réelle de la base MySQL et les tests locaux
 ### Lien avec le BTS SIO
 
 Cette semaine prépare l’épreuve E6 SLAM car elle organise l’environnement nécessaire au futur développement de l’application DoctoRDV.
+
+## Semaine 5 — Conception du modèle de données
+
+### Objectif de la semaine
+
+L’objectif de cette semaine était de préparer le modèle de données du projet DoctoRDV.
+
+Cette étape permet d’identifier les futures tables nécessaires avant la création de la base MySQL.
+
+### Travail réalisé
+
+- Création d’un MCD brouillon.
+- Création d’un MLD brouillon.
+- Rédaction d’un dictionnaire de données.
+- Rédaction des règles de gestion.
+- Identification des principales entités : rôles, utilisateurs, praticiens, spécialités, disponibilités et rendez-vous.
+- Mise à jour de la documentation du projet.
+
+### Difficultés rencontrées
+
+La difficulté principale a été de garder un modèle simple.
+
+J’ai choisi de représenter le patient comme un utilisateur avec le rôle `patient`, afin d’éviter une structure trop complexe pour une première version.
+
+### Résultat obtenu
+
+Le projet dispose maintenant d’une première conception de base de données.
+
+Cette conception servira ensuite à créer le script SQL et à développer les fonctionnalités de réservation.
+
+### Preuves produites
+
+- `database/mcd-brouillon.md`
+- `database/mld-brouillon.md`
+- `database/dictionnaire-donnees.md`
+- `database/regles-gestion.md`
+- capture du diagramme Mermaid
+- capture GitHub
+- commit Git
+
+### Lien avec le BTS SIO
+
+Cette semaine est liée à l’épreuve E6 SLAM, car elle prépare la conception de la solution applicative et la future gestion des données.
