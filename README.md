@@ -93,3 +93,4 @@ DoctoRDV/
 | Semaine 4 | Préparation de l’environnement technique, documentation d’installation, conventions de nommage et préparation de la future base de données | Terminé |
 | Semaine 5 | Conception du modèle de données : MCD brouillon, MLD brouillon, dictionnaire de données et règles de gestion | Terminé |
 | Semaine 6 | Création des maquettes fonctionnelles : recherche, fiche praticien, calendrier, formulaire de réservation et espace praticien | Terminé |
+| Semaine 7 | Préparation de l’architecture applicative prévue : arborescence, dépendances prévues, rôles utilisateurs et préparation du futur développement | Terminé |

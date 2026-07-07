@@ -263,3 +263,49 @@ Ces maquettes serviront de base pour développer les futures pages PHP de l’ap
 ### Lien avec le BTS SIO
 
 Cette semaine est liée à l’épreuve E6 SLAM, car elle prépare la conception de l’interface et des fonctionnalités de l’application.
+
+## Semaine 7 — Préparation de l’architecture applicative
+
+### Objectif de la semaine
+
+L’objectif de cette semaine était de préparer l’architecture applicative prévue pour DoctoRDV.
+
+Je n’ai pas encore commencé le développement, car les leçons HTML, CSS, SQL et PHP seront étudiées plus tard dans le planning.
+
+### Travail réalisé
+
+- Création des dossiers `public` et `src`.
+- Création des sous-dossiers `config`, `controllers`, `models` et `views`.
+- Création du fichier `architecture-applicative-prevue.md`.
+- Création du fichier `dependances-prevues.md`.
+- Création du fichier `roles-et-acces-prevus.md`.
+- Création du fichier `preparation-developpement.md`.
+- Préparation des futurs rôles : administrateur, praticien, patient et visiteur.
+
+### Difficultés rencontrées
+
+La difficulté principale a été de ne pas commencer le code trop tôt.
+
+J’ai choisi de préparer l’organisation du projet sans copier de code PHP ou HTML que je n’ai pas encore étudié.
+
+### Résultat obtenu
+
+Le projet dispose maintenant d’une structure prévue pour le futur développement.
+
+Les rôles et les accès sont aussi préparés pour aider à sécuriser l’application plus tard.
+
+### Preuves produites
+
+- `architecture-applicative-prevue.md`
+- `dependances-prevues.md`
+- `roles-et-acces-prevus.md`
+- `preparation-developpement.md`
+- capture de l’arborescence VS Code
+- capture GitHub
+- commit Git
+
+### Lien avec le BTS SIO
+
+Cette semaine prépare l’épreuve E6 SLAM, car elle organise la future solution applicative avant le développement.
+
+Elle fait aussi un lien avec les notions d’utilisateurs, groupes et accès étudiées dans la semaine.
