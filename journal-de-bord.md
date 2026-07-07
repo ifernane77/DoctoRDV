@@ -218,3 +218,48 @@ Cette conception servira ensuite à créer le script SQL et à développer les f
 ### Lien avec le BTS SIO
 
 Cette semaine est liée à l’épreuve E6 SLAM, car elle prépare la conception de la solution applicative et la future gestion des données.
+
+## Semaine 6 — Maquettes fonctionnelles de l’application
+
+### Objectif de la semaine
+
+L’objectif de cette semaine était de créer les maquettes fonctionnelles du projet DoctoRDV.
+
+Ces maquettes permettent de visualiser les écrans principaux avant le développement.
+
+### Travail réalisé
+
+- Création du dossier `maquettes`.
+- Création du fichier `maquettes-fonctionnelles.md`.
+- Préparation de la maquette 1 : recherche de praticien.
+- Préparation de la maquette 2 : fiche praticien.
+- Préparation de la maquette 3 : calendrier des disponibilités.
+- Préparation de la maquette 4 : formulaire de réservation.
+- Préparation de la maquette 5 : espace praticien.
+- Création du fichier `parcours-utilisateur.md`.
+- Création du fichier `justification-maquettes.md`.
+
+### Difficultés rencontrées
+
+La difficulté principale a été de rester simple.
+
+J’ai évité de prévoir des fonctionnalités trop avancées comme les rappels SMS, les paiements, les dossiers médicaux ou la téléconsultation.
+
+### Résultat obtenu
+
+Le projet dispose maintenant de maquettes fonctionnelles claires.
+
+Ces maquettes serviront de base pour développer les futures pages PHP de l’application.
+
+### Preuves produites
+
+- `maquettes/maquettes-fonctionnelles.md`
+- `maquettes/parcours-utilisateur.md`
+- `maquettes/justification-maquettes.md`
+- capture VS Code
+- capture GitHub
+- commit Git
+
+### Lien avec le BTS SIO
+
+Cette semaine est liée à l’épreuve E6 SLAM, car elle prépare la conception de l’interface et des fonctionnalités de l’application.
