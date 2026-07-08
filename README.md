@@ -94,3 +94,4 @@ DoctoRDV/
 | Semaine 5 | Conception du modèle de données : MCD brouillon, MLD brouillon, dictionnaire de données et règles de gestion | Terminé |
 | Semaine 6 | Création des maquettes fonctionnelles : recherche, fiche praticien, calendrier, formulaire de réservation et espace praticien | Terminé |
 | Semaine 7 | Préparation de l’architecture applicative prévue : arborescence, dépendances prévues, rôles utilisateurs et préparation du futur développement | Terminé |
+| Semaine 8 | Préparation de la page portfolio DoctoRDV : objectif, périmètre, preuves, script oral et séparation avec EcoTech | Terminé |

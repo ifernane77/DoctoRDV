@@ -309,3 +309,52 @@ Les rôles et les accès sont aussi préparés pour aider à sécuriser l’appl
 Cette semaine prépare l’épreuve E6 SLAM, car elle organise la future solution applicative avant le développement.
 
 Elle fait aussi un lien avec les notions d’utilisateurs, groupes et accès étudiées dans la semaine.
+
+## Semaine 8 — Préparation de la page portfolio DoctoRDV
+
+### Objectif de la semaine
+
+L’objectif de cette semaine était de préparer une première page portfolio pour le projet DoctoRDV.
+
+Cette semaine est liée à l’identité professionnelle, au portfolio et à la préparation de l’oral.
+
+### Travail réalisé
+
+- Création du dossier `portfolio`.
+- Création du fichier `presentation-portfolio-doctordv.md`.
+- Création du fichier `preuves-portfolio.md`.
+- Création du fichier `separation-doctordv-ecotech.md`.
+- Création du fichier `script-oral-doctordv.md`.
+- Présentation de l’objectif du projet.
+- Présentation du périmètre.
+- Liste des preuves déjà produites.
+- Explication de la différence entre DoctoRDV et EcoTech.
+- Préparation d’un court script oral.
+
+### Difficultés rencontrées
+
+La difficulté principale a été de présenter le projet simplement.
+
+J’ai aussi fait attention à bien séparer DoctoRDV d’EcoTech, car les deux projets n’ont pas le même contexte.
+
+### Résultat obtenu
+
+Le projet dispose maintenant d’une première base pour le portfolio.
+
+Cette page pourra être reprise plus tard dans mon portfolio final avec des captures, des liens GitHub et les preuves importantes.
+
+### Preuves produites
+
+- `portfolio/presentation-portfolio-doctordv.md`
+- `portfolio/preuves-portfolio.md`
+- `portfolio/separation-doctordv-ecotech.md`
+- `portfolio/script-oral-doctordv.md`
+- capture VS Code
+- capture GitHub
+- commit Git
+
+### Lien avec le BTS SIO
+
+Cette semaine prépare le portfolio et l’oral.
+
+Elle permet aussi de relier le projet DoctoRDV à l’épreuve E6 SLAM.
