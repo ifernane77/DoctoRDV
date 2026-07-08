@@ -358,3 +358,48 @@ Cette page pourra être reprise plus tard dans mon portfolio final avec des capt
 Cette semaine prépare le portfolio et l’oral.
 
 Elle permet aussi de relier le projet DoctoRDV à l’épreuve E6 SLAM.
+
+## Semaine 9 — Préparation des rôles et droits d’accès
+
+### Objectif de la semaine
+
+L’objectif de cette semaine était de préparer les règles d’accès du projet DoctoRDV.
+
+Cette semaine est liée à la sécurisation des comptes, des rôles et des traitements.
+
+### Travail réalisé
+
+- Création du dossier `securite-acces`.
+- Création du fichier `matrice-roles-droits.md`.
+- Préparation des rôles : visiteur, patient, praticien et administrateur.
+- Création du fichier `regles-authentification.md`.
+- Préparation des règles de connexion prévues.
+- Création du fichier `scenarios-controle-acces.md`.
+- Préparation de scénarios pour vérifier les droits plus tard.
+
+### Difficultés rencontrées
+
+La difficulté principale a été de ne pas coder l’authentification trop tôt.
+
+J’ai donc préparé les rôles et les droits en documentation, sans développer encore les sessions PHP.
+
+### Résultat obtenu
+
+Le projet dispose maintenant d’une matrice rôles/droits claire.
+
+Cette préparation servira plus tard lorsque l’authentification sera développée.
+
+### Preuves produites
+
+- `securite-acces/matrice-roles-droits.md`
+- `securite-acces/regles-authentification.md`
+- `securite-acces/scenarios-controle-acces.md`
+- capture du fichier principal
+- capture GitHub ou README
+- commit Git
+
+### Lien avec le BTS SIO
+
+Cette semaine prépare l’épreuve E6 SLAM, car elle permet de réfléchir aux accès et aux rôles dans l’application.
+
+Elle peut aussi servir pour l’E7, car elle touche à la sécurité des accès.
