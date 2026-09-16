@@ -1,125 +1,102 @@
-
----
-
-## `database/schema-prevu.md`
-
-```md
 # Schéma prévu de la base de données — DoctoRDV
 
 ## Objectif
 
-Ce document prépare les futures tables de la base de données DoctoRDV.
+Ce document fixe le schéma de données visé pour la version 1 de DoctoRDV. Il est aligné avec le choix fonctionnel suivant : un patient est un utilisateur ayant le rôle `patient`. Il n’y a donc pas de table `patients` distincte dans la V1.
 
-Il ne remplace pas le MCD, mais il permet d’anticiper les principales données à gérer.
+Le schéma final sera traduit dans un script SQL, puis vérifié et ajusté avec la base MySQL réellement créée.
 
-## Tables prévues
+## Tables de la version 1
 
-| Table | Rôle prévu |
+| Table | Rôle |
 |---|---|
-| roles | Stocker les rôles des utilisateurs |
-| users | Stocker les comptes utilisateurs |
-| patients | Stocker les informations des patients fictifs |
-| praticiens | Stocker les informations des praticiens |
-| specialites | Stocker les spécialités médicales fictives |
-| creneaux | Stocker les créneaux disponibles |
-| rendez_vous | Stocker les rendez-vous réservés |
+| `roles` | Définit les rôles : patient, praticien et administrateur. |
+| `users` | Stocke les comptes utilisateurs fictifs. |
+| `specialites` | Stocke les spécialités des praticiens. |
+| `praticiens` | Complète le compte d’un utilisateur praticien. |
+| `disponibilites` | Stocke les créneaux proposés par les praticiens. |
+| `rendez_vous` | Stocke les réservations et leur statut. |
+| `journal_actions` | Conserve la trace des actions importantes liées aux rendez-vous. |
 
-## Table roles
+## Principales données
 
-Données possibles :
+### `roles`
 
-- id ;
-- nom du rôle.
+- `id` ;
+- `nom`.
 
-Exemples de rôles :
+Exemples : `patient`, `praticien`, `administrateur`.
 
-- administrateur ;
-- praticien ;
-- patient.
+### `users`
 
-## Table users
+- `id` ;
+- `role_id` ;
+- `nom` et `prenom` fictifs ;
+- `email` ;
+- `mot_de_passe` haché ;
+- `telephone` fictif ;
+- `date_creation`.
 
-Données possibles :
+### `specialites`
 
-- id ;
-- nom ;
-- prénom ;
-- email ;
-- mot de passe ;
-- rôle ;
-- date de création.
+- `id` ;
+- `nom`.
 
-## Table patients
+### `praticiens`
 
-Données possibles :
+- `id` ;
+- `user_id` ;
+- `specialite_id` ;
+- `description`.
 
-- id ;
-- utilisateur associé ;
-- téléphone ;
-- date de naissance fictive.
+Les coordonnées du praticien sont déjà portées par le compte lié dans `users` afin d’éviter les doublons inutiles.
 
-## Table praticiens
+### `disponibilites`
 
-Données possibles :
+- `id` ;
+- `praticien_id` ;
+- `date_disponibilite` ;
+- `heure_debut` ;
+- `heure_fin` ;
+- `statut` : `disponible`, `reserve` ou `annule`.
 
-- id ;
-- nom ;
-- prénom ;
-- spécialité ;
-- email ;
-- téléphone ;
-- description.
+### `rendez_vous`
 
-## Table specialites
+- `id` ;
+- `patient_id` ;
+- `praticien_id` ;
+- `disponibilite_id` ;
+- `statut` : `confirme`, `annule` ou `termine` ;
+- `date_creation` ;
+- `date_modification`.
 
-Données possibles :
+### `journal_actions`
 
-- id ;
-- nom de la spécialité.
+- `id` ;
+- `user_id` de l’auteur de l’action ;
+- `rendez_vous_id` concerné, si applicable ;
+- `action` : création, modification ou annulation ;
+- `date_action`.
 
-Exemples :
+## Relations principales
 
-- Médecin généraliste ;
-- Dentiste ;
-- Kinésithérapeute ;
-- Infirmier.
+- un rôle peut être attribué à plusieurs utilisateurs ;
+- un utilisateur praticien est lié à une fiche praticien ;
+- une spécialité peut concerner plusieurs praticiens ;
+- un praticien propose plusieurs disponibilités ;
+- un patient peut avoir plusieurs rendez-vous ;
+- un créneau ne peut être associé qu’à un seul rendez-vous ;
+- un rendez-vous peut produire plusieurs entrées dans le journal d’actions.
 
-## Table creneaux
+## Contraintes à implémenter dans le script SQL
 
-Données possibles :
+- l’adresse e-mail d’un utilisateur est unique ;
+- les clés étrangères assurent la cohérence des relations ;
+- les champs nécessaires sont obligatoires ;
+- une disponibilité réservée ne doit plus être réservée une seconde fois ;
+- les mots de passe ne sont jamais enregistrés en clair ;
+- aucune table ne contient de diagnostic, ordonnance, numéro de sécurité sociale ou donnée de santé réelle.
 
-- id ;
-- praticien concerné ;
-- date ;
-- heure de début ;
-- heure de fin ;
-- statut du créneau.
+## Suite prévue
 
-Statuts possibles :
-
-- disponible ;
-- réservé ;
-- annulé.
-
-## Table rendez_vous
-
-Données possibles :
-
-- id ;
-- patient concerné ;
-- praticien concerné ;
-- créneau concerné ;
-- statut du rendez-vous ;
-- date de création.
-
-Statuts possibles :
-
-- confirmé ;
-- annulé ;
-- terminé.
-
-## Remarque
-
-Ce schéma reste prévisionnel.
-
-Il sera amélioré lors de la création du MCD et du script SQL.
+Lors de l’implémentation, ce schéma donnera lieu à un fichier `database/doctordv.sql` contenant la création des tables, les contraintes, les données fictives de test et les requêtes nécessaires aux fonctionnalités de la V1.

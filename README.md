@@ -1,98 +1,86 @@
 # DoctoRDV
 
-## Présentation du projet
+## Présentation
 
-DoctoRDV est une application web de gestion de rendez-vous médicaux fictifs développée dans le cadre du BTS SIO option SLAM.
+DoctoRDV est une application web fictive de gestion de rendez-vous pour une maison médicale fictive, **MediCentre Nova**. Elle est développée dans le cadre du BTS SIO, option SLAM, et constitue ma réalisation principale pour l’épreuve E6.
 
-L’objectif est de permettre à une maison médicale fictive, **MediCentre Nova**, de mieux organiser les rendez-vous entre les patients et les praticiens.
+L’application centralise la consultation des disponibilités et la gestion des rendez-vous afin de limiter les erreurs de planning et les échanges téléphoniques inutiles.
 
-Ce projet constitue ma réalisation principale pour l’épreuve **E6 SLAM**.
+> Toutes les données utilisées dans le projet sont fictives. L’application ne stocke aucun diagnostic, ordonnance, compte rendu médical, numéro de sécurité sociale ou autre donnée médicale sensible.
 
-## Contexte
+## Objectifs de la version 1
 
-MediCentre Nova gère actuellement ses rendez-vous principalement par téléphone.
+La première version doit permettre :
 
-Cette organisation peut entraîner plusieurs difficultés :
+- à un visiteur de consulter les praticiens et leurs spécialités ;
+- à un patient connecté de consulter les créneaux disponibles, réserver un rendez-vous, consulter ses rendez-vous et annuler l’un des siens ;
+- à un praticien connecté de consulter uniquement son planning et de gérer ses créneaux ;
+- à un administrateur de gérer les praticiens, les spécialités, les créneaux et les rendez-vous.
 
-- erreurs de planning ;
-- oublis de rendez-vous ;
-- difficulté à suivre les disponibilités des praticiens ;
-- perte de temps dans la gestion des appels ;
-- manque de visibilité sur les rendez-vous à venir.
+## Rôles
 
-## Objectif de l’application
+| Rôle | Accès principal |
+|---|---|
+| Visiteur | Consulte les praticiens et les créneaux disponibles. |
+| Patient | Réserve, consulte et annule ses propres rendez-vous. |
+| Praticien | Consulte son planning et gère ses créneaux. |
+| Administrateur | Administre les données principales de l’application. |
 
-L’application DoctoRDV doit permettre de centraliser la gestion des rendez-vous.
+## Périmètre exclu de la V1
 
-Elle permettra notamment :
-
-- à un visiteur de consulter les praticiens ;
-- à un patient fictif de consulter les disponibilités ;
-- à un patient fictif de réserver un rendez-vous ;
-- à un patient fictif d’annuler un rendez-vous ;
-- à un praticien de consulter son planning ;
-- à un administrateur de gérer les praticiens, les créneaux et les rendez-vous.
-
-## Utilisateurs prévus
-
-- Visiteur
-- Patient fictif
-- Praticien
-- Administrateur
-
-## Fonctionnalités prévues
-
-- Consultation des praticiens
-- Consultation des disponibilités
-- Réservation d’un rendez-vous
-- Annulation d’un rendez-vous
-- Connexion utilisateur
-- Gestion des rôles
-- Gestion des praticiens
-- Gestion des créneaux
-- Consultation du planning praticien
-- Administration des rendez-vous
+- paiement en ligne ;
+- notifications SMS ou e-mail automatiques ;
+- téléconsultation ;
+- synchronisation avec un agenda externe ;
+- application mobile native ;
+- gestion de dossiers médicaux ou de données de santé réelles.
 
 ## Technologies prévues
 
-- PHP
-- MySQL
-- HTML / CSS
-- JavaScript
-- Bootstrap
-- Laragon
-- Git
-- GitHub
-- Markdown
+- PHP 8 ;
+- MySQL ;
+- HTML, CSS et Bootstrap ;
+- JavaScript simple si nécessaire ;
+- Laragon pour l’environnement local ;
+- Git et GitHub pour le versionnement.
 
-## Organisation du dépôt
+Le choix d’une application PHP simple permet de travailler les fondamentaux attendus en BTS SIO SLAM : formulaires, sessions, contrôle des accès, requêtes SQL, architecture MVC légère, tests et documentation.
+
+## Structure du dépôt
 
 ```text
 DoctoRDV/
 ├── README.md
-├── objectifs-projet.md
+├── presentation-projet.md
+├── analyse-fonctionnelle.md
+├── architecture.md
 ├── backlog.md
-├── acteurs-et-roles.md
-├── architecture-et-flux.md
-├── cas-utilisation.md
-├── diagramme-cas-utilisation.md
-├── architecture-application.md
+├── installation.md
 ├── journal-de-bord.md
-├── src/
 ├── database/
+│   ├── mcd-brouillon.md
+│   ├── mld-brouillon.md
+│   ├── dictionnaire-donnees.md
+│   ├── regles-gestion.md
+│   └── doctordv.sql                 # à créer lors de l’implémentation
+├── securite-acces/
+├── maquettes/
+├── src/
+├── public/
 ├── tests/
 └── preuves/
+```
 
-## Avancement
+## État du projet
 
-| Semaine | Travail réalisé | Statut |
-|---|---|---|
-| Semaine 1 | Cadrage du projet, objectifs, backlog initial et dépôt GitHub | Terminé |
-| Semaine 2 | Identification des acteurs, rôles, flux et architecture générale | Terminé |
-| Semaine 3 | Rédaction des cas d’utilisation et préparation de l’architecture applicative | Terminé |
-| Semaine 4 | Préparation de l’environnement technique, documentation d’installation, conventions de nommage et préparation de la future base de données | Terminé |
-| Semaine 5 | Conception du modèle de données : MCD brouillon, MLD brouillon, dictionnaire de données et règles de gestion | Terminé |
-| Semaine 6 | Création des maquettes fonctionnelles : recherche, fiche praticien, calendrier, formulaire de réservation et espace praticien | Terminé |
-| Semaine 7 | Préparation de l’architecture applicative prévue : arborescence, dépendances prévues, rôles utilisateurs et préparation du futur développement | Terminé |
-| Semaine 8 | Préparation de la page portfolio DoctoRDV : objectif, périmètre, preuves, script oral et séparation avec EcoTech | Terminé |
-| Semaine 9 | Préparation de la sécurité des accès : matrice rôles/droits, règles d’authentification et scénarios de contrôle d’accès | Terminé |
+La phase de cadrage, d’analyse fonctionnelle, de conception initiale des données et de préparation des accès est réalisée. Le prochain livrable est une **version MVP fonctionnelle** : base MySQL, code PHP, données fictives, tests et captures de fonctionnement.
+
+## Éléments à produire pour le dossier E6
+
+- code source versionné sur GitHub ;
+- script SQL et jeu de données fictives ;
+- MCD et MLD finalisés à partir de la base réellement créée ;
+- cahier de tests avec résultats ;
+- captures de l’application en fonctionnement ;
+- documentation d’installation et d’utilisation mise à jour ;
+- fiche descriptive et scénario de démonstration orale.
