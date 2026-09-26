@@ -1,0 +1,720 @@
+
+/* Partie image */
+.logo {
+    width: 180px;
+    height: auto;
+}
+
+.photo-medecin {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* style praticien.html */
+
+.indispo {
+    color: #B42318;
+    font-weight: 700;
+}
+
+/* header */
+.nom-site {
+        color: #064E5F;
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: 1px;
+}
+
+nav a {
+    color: #064E5F;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 20px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: 0,3s;
+}
+
+nav a:hover {
+    color: white;
+    background-color: #064E5F;
+}
+
+article a {
+    display: inline-block;
+    color: white;
+    background-color: #1E9E45;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+article a:hover {
+    background-color: #167A35;
+    transform: translateY(-2px);
+}
+
+/* main */
+.specialite {
+    color: #1E9E45;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+aside {
+    background-color: white;
+    border-left: 4px solid #1E9E45;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 10px;
+}
+
+/* body */ 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: 16px;
+    background: linear-gradient(
+        135deg,
+        #f8fafc 0%,
+        #e0e7ff 45%,
+        #cffafe 100%
+    );
+
+    min-height: 100vh;
+    line-height: 1,5;
+}
+
+h1 {
+    color: #064E5F;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+h2 {
+    color: #1E9E45;
+    font-size: 30px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+h3 {
+    color: #2F6673;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+#praticiens {
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 30px;
+    margin: 40px auto;
+    border-radius: 18px;
+    max-width: 1100px;
+    box-shadow: 0 8px 25px rgba(6, 78, 95, 0.10);
+}
+
+.fiche-praticien {
+    background-color: rgba(255, 255, 255, 0.80);
+    max-width: 900px;
+    margin: 35px auto;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(6, 78, 95, 0.10);
+}
+
+.fiche-praticien h2 {
+    color: #064E5F;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.fiche-praticien h3 {
+    color: #2F6673;
+    font-size: 21px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.fiche-praticien ul {
+    list-style: none;
+    padding: 0;
+}
+
+.fiche-praticien li {
+    background-color: #F8FAFC;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    border-left: 4px solid #1E9E45;
+    border-radius: 8px;
+}
+
+.fiche-praticien a {
+    display: inline-block;
+    background-color: #1E9E45;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 18px;
+    margin-top: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.fiche-praticien a:hover {
+    background-color: #167A35;
+    transform: translateY(-2px);
+}
+
+.lien-retour {
+    display: block;
+    width: fit-content;
+    margin: 30px auto;
+    color: #064E5F;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.lien-retour:hover {
+    text-decoration: underline;
+}
+
+/* lien footer */
+
+footer a {
+    color: #064E5F;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/*
+==========================================================================
+                 MÉMO TECHNIQUE CSS — DoctoRDV
+==========================================================================
+
+
+1. SÉLECTEURS DESCENDANTS
+-------------------------
+
+Exemple :
+
+    .fiche-praticien h2 {
+        ...
+    }
+
+Cela signifie :
+"cibler les <h2> qui se trouvent à l'intérieur d'un élément
+ayant la classe .fiche-praticien".
+
+Ce sélecteur est plus précis que :
+
+    h2 {
+        ...
+    }
+
+Il permet donc de styliser différemment certains h2 sans modifier
+tous les h2 du site.
+
+
+2. CASCADE ET SPÉCIFICITÉ
+-------------------------
+
+Plusieurs règles CSS peuvent cibler le même élément.
+
+Exemple :
+
+    h2 {
+        color: green;
+    }
+
+    .fiche-praticien h2 {
+        color: blue;
+    }
+
+Le deuxième sélecteur est plus spécifique.
+
+Le navigateur choisira donc généralement :
+
+    color: blue;
+
+Ordre simplifié de spécificité :
+
+    élément HTML       → h2
+    classe             → .specialite
+    id                 → #praticiens
+
+Un sélecteur plus précis peut prendre le dessus sur une règle
+écrite précédemment.
+
+
+3. DIFFÉRENCE ENTRE CLASS ET ID
+-------------------------------
+
+Classe :
+
+    class="specialite"
+
+CSS :
+
+    .specialite {
+        ...
+    }
+
+Une classe peut être utilisée plusieurs fois.
+
+
+ID :
+
+    id="praticiens"
+
+CSS :
+
+    #praticiens {
+        ...
+    }
+
+Un ID doit être unique dans la page.
+
+Il peut également servir d'ancre :
+
+    <a href="#praticiens">
+
+qui amène vers :
+
+    <section id="praticiens">
+
+
+4. BOX MODEL : MARGIN / BORDER / PADDING / CONTENU
+--------------------------------------------------
+
+Un élément HTML peut être représenté ainsi :
+
+    +-----------------------------+
+    |           margin            |
+    |   +---------------------+   |
+    |   |       border        |   |
+    |   |   +-------------+   |   |
+    |   |   |   padding   |   |   |
+    |   |   |   contenu   |   |   |
+    |   |   +-------------+   |   |
+    |   +---------------------+   |
+    +-----------------------------+
+
+margin
+    = espace extérieur.
+
+padding
+    = espace entre le contenu et la bordure.
+
+border
+    = bordure de l'élément.
+
+
+5. CENTRER UN BLOC AVEC "AUTO"
+------------------------------
+
+Exemple :
+
+    .fiche-praticien {
+        max-width: 900px;
+        margin: 35px auto;
+    }
+
+35px :
+    marge en haut et en bas.
+
+auto :
+    le navigateur calcule automatiquement les marges gauche
+    et droite.
+
+Avec une largeur ou une max-width, cela permet de centrer
+horizontalement le bloc.
+
+
+6. MAX-WIDTH
+------------
+
+    max-width: 900px;
+
+Contrairement à :
+
+    width: 900px;
+
+max-width n'impose pas toujours 900px.
+
+Cela signifie :
+
+"L'élément peut mesurer jusqu'à 900px maximum."
+
+Il peut devenir plus petit si la fenêtre du navigateur est plus petite.
+
+C'est donc plus adapté aux interfaces responsives.
+
+
+7. DISPLAY: INLINE-BLOCK
+------------------------
+
+Un lien <a> est normalement un élément inline.
+
+Exemple :
+
+    <a href="#">Se connecter</a>
+
+Avec :
+
+    display: inline-block;
+
+le lien garde un comportement proche d'un élément inline,
+mais peut être beaucoup plus facilement stylisé comme un bouton :
+
+    padding
+    margin
+    dimensions
+    border-radius
+
+Exemple :
+
+    .fiche-praticien a {
+        display: inline-block;
+        padding: 10px 18px;
+    }
+
+
+8. WIDTH: FIT-CONTENT
+---------------------
+
+    width: fit-content;
+
+La largeur de l'élément s'adapte à son contenu.
+
+Exemple :
+
+    ← Retour à la liste des praticiens
+
+Le bloc ne prend pas toute la largeur disponible :
+il prend uniquement la largeur nécessaire pour son contenu.
+
+
+9. OBJECT-FIT: COVER
+--------------------
+
+Exemple :
+
+    .photo-medecin {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+    }
+
+Si une image n'a pas les mêmes proportions que la zone définie,
+elle pourrait normalement être déformée.
+
+    object-fit: cover;
+
+demande au navigateur :
+
+- de conserver les proportions de l'image ;
+- de remplir complètement la zone ;
+- de recadrer une partie de l'image si nécessaire.
+
+Très utile pour les photos de profil.
+
+
+10. BORDER-RADIUS: 50%
+----------------------
+
+Avec :
+
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+
+une image carrée devient circulaire.
+
+Le 50% est calculé par rapport aux dimensions de l'élément.
+
+
+11. RGBA ET TRANSPARENCE
+------------------------
+
+Exemple :
+
+    background-color: rgba(255, 255, 255, 0.80);
+
+RGBA :
+
+    R = rouge
+    G = vert
+    B = bleu
+    A = alpha / opacité
+
+Les valeurs RGB vont généralement de 0 à 255.
+
+Alpha :
+
+    0    = transparent
+    0.5  = semi-transparent
+    1    = opaque
+
+Ici :
+
+    0.80
+
+signifie environ 80% d'opacité.
+
+Cela permet au dégradé du body de rester légèrement visible
+derrière les cartes.
+
+
+12. LINEAR-GRADIENT
+-------------------
+
+Exemple :
+
+    background: linear-gradient(
+        135deg,
+        #f8fafc 0%,
+        #e0e7ff 45%,
+        #cffafe 100%
+    );
+
+linear-gradient() génère un dégradé.
+
+135deg :
+    direction du dégradé.
+
+0%, 45%, 100% :
+    positions des différentes couleurs.
+
+Important :
+
+Un gradient CSS est considéré par le navigateur comme une
+IMAGE générée.
+
+On pourrait donc écrire :
+
+    background-image: linear-gradient(...);
+
+mais pas :
+
+    background-color: linear-gradient(...);
+
+
+13. :HOVER
+----------
+
+:hover est une pseudo-classe.
+
+Exemple :
+
+    .fiche-praticien a:hover {
+        background-color: #167A35;
+    }
+
+La règle s'applique uniquement lorsque la souris est placée
+sur l'élément.
+
+L'état normal et l'état hover peuvent donc avoir deux styles différents.
+
+
+14. TRANSITION
+--------------
+
+Exemple :
+
+    transition: 0.3s;
+
+Permet au navigateur de passer progressivement d'un état CSS
+à un autre.
+
+Exemple :
+
+    a {
+        background-color: #1E9E45;
+        transition: 0.3s;
+    }
+
+    a:hover {
+        background-color: #167A35;
+    }
+
+Sans transition :
+    changement immédiat.
+
+Avec transition :
+    changement progressif pendant 0.3 seconde.
+
+
+15. TRANSFORM: TRANSLATEY()
+---------------------------
+
+Exemple :
+
+    transform: translateY(-2px);
+
+translateY() déplace visuellement un élément verticalement.
+
+Valeur négative :
+
+    -2px
+
+→ déplacement vers le haut.
+
+Valeur positive :
+
+    2px
+
+→ déplacement vers le bas.
+
+Exemple utilisé :
+
+    .fiche-praticien a:hover {
+        transform: translateY(-2px);
+    }
+
+Cela crée un léger effet de bouton qui se soulève.
+
+
+16. BOX-SHADOW
+--------------
+
+Exemple :
+
+    box-shadow: 0 8px 25px rgba(6, 78, 95, 0.10);
+
+Ordre :
+
+    0      → déplacement horizontal
+    8px    → déplacement vertical
+    25px   → flou
+    rgba   → couleur de l'ombre
+
+Une valeur Alpha faible, par exemple :
+
+    0.10
+
+permet d'obtenir une ombre légère plutôt qu'un contour très visible.
+
+
+17. BORDER-LEFT
+---------------
+
+Exemple :
+
+    border-left: 4px solid #1E9E45;
+
+Syntaxe :
+
+    épaisseur | style | couleur
+
+Donc :
+
+    4px       = épaisseur
+    solid     = trait continu
+    #1E9E45   = couleur
+
+border-left applique uniquement la bordure gauche.
+
+
+18. LIST-STYLE: NONE
+--------------------
+
+Les <ul> ont normalement des puces automatiques.
+
+    list-style: none;
+
+supprime ces puces.
+
+On ajoute souvent :
+
+    padding: 0;
+
+car le navigateur conserve autrement un espace à gauche,
+même après avoir supprimé les puces.
+
+
+19. HÉRITAGE CSS
+----------------
+
+Certaines propriétés sont héritées automatiquement par les enfants.
+
+Exemple :
+
+    body {
+        font-family: Arial;
+        color: #333;
+    }
+
+Les paragraphes, titres et autres éléments peuvent hériter
+de ces propriétés sans qu'elles soient répétées partout.
+
+D'autres propriétés, comme :
+
+    margin
+    padding
+    border
+    background
+
+ne sont généralement pas héritées automatiquement.
+
+
+20. POURQUOI LE MÊME CSS FONCTIONNE SUR PLUSIEURS PAGES
+-------------------------------------------------------
+
+Les deux pages HTML utilisent :
+
+    <link rel="stylesheet" href="css/style.css">
+
+Elles chargent donc la même feuille CSS.
+
+Une règle comme :
+
+    .logo {
+        ...
+    }
+
+fonctionne sur index.html ET praticien.html dès qu'un élément possède :
+
+    class="logo"
+
+Il n'est donc pas nécessaire de recopier le CSS pour chaque page.
+
+
+==========================================================================
+                          À RETENIR EN PRIORITÉ
+==========================================================================
+
+Les notions les plus importantes à comprendre ici sont :
+
+- cascade et spécificité ;
+- sélecteurs descendants ;
+- box model ;
+- inline / block / inline-block ;
+- max-width + margin auto ;
+- héritage ;
+- pseudo-classe :hover ;
+- transition et transform ;
+- object-fit ;
+- comportement des gradients ;
+- différence class / id.
+
+Ce sont surtout ces notions qui expliquent POURQUOI une mise en page
+CSS fonctionne ou ne fonctionne pas.
+
+==========================================================================
+*/
