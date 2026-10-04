@@ -13,7 +13,7 @@
       <nav>
         <a href="index.html">Accueil</a>
         <a href="#praticiens">voir les praticiens</a>
-        <a href="#">Connexion</a>
+        <a href="connexion.html">Connexion</a>
       </nav>
     </header>
     <main>
@@ -30,6 +30,7 @@
           utilisateurs et rendez-vous présentés sont fictifs.
         </p>
       </section>
+
       <section>
         <h2>Spécialités disponibles</h2>
         <ul>
@@ -38,9 +39,27 @@
           <li>Dermatologie</li>
         </ul>
       </section>
+
+      <section class="recherche-praticien">
+        <h2>Rechercher un praticien</h2>
+
+        <form action="" method="get" class="filtre-praticiens">
+            <label for="specialite">Spécialité</label>
+
+            <select name="specialite" id="specialite">
+              <option value="">Toutes les spécialités</option>
+              <option value="medecine-generale">Médecine générale</option>
+              <option value="pediatrie">Pédiatrie</option>
+              <option value="dermatologie">Dermatologie</option>
+            </select>
+
+            <button type="submit">Rechercher</button>
+          </form>
+      </section>
+
       <section id="praticiens">
         <h2>Nos praticiens</h2>
-        <article>
+        <article class="liste-praticiens">
           <img
             src="images/medecin-3.jpg"
             alt="Dr Khalid Asadi, médecin généraliste"
@@ -52,7 +71,7 @@
           <p>Consultations de médecine générale pour adultes et enfants.</p>
           <a href="praticien.html">Voir les disponibilités</a>
         </article>
-        <article>
+        <article class="liste-praticiens">
           <img
             src="images/medecin-1.jpg"
             alt="Dr Thomas Rivière, pédiatre"
@@ -64,7 +83,7 @@
           <p>Consultations destinées au suivi médical des enfants.</p>
           <a href="praticien.html">Voir les disponibilités</a>
         </article>
-        <article>
+        <article class="liste-praticiens">
           <img
             src="images/medecin-2.jpg"
             alt="Dr Sarah Fontaine, dermatologue"
@@ -80,7 +99,7 @@
       <section>
         <h2>Découvrir MediCentre Nova</h2>
 
-        <video controls>
+        <video controls class="video-presentation">
           <source src="videos/presentation.mp4" type="video/mp4" />
           Votre navigateur ne prend pas en charge la vidéo.
         </video>

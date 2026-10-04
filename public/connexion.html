@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion — DoctoRDV</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <header>
+      <img src="images/logo-doctordv.png" alt="Logo DoctoRDV" class="logo" />
+
+      <p class="nom-site">DoctoRDV MediCentre Nova</p>
+    </header>
+
+    <main>
+        <section class="formulaire-connexion">
+            <img src="images/logo-doctordv.png" alt="Logo DoctoRDV" class="logo-connexion" />
+            <H1>Connexion</H1>
+            
+
+                <form action="" method="post"
+                class="connexion-utilisateur">
+                    <div>
+                        <label for="email">E-mail: </label>
+                        <input type="email" 
+                        id="email"
+                        name="email"
+                        required>
+                    </div>
+
+                    <div>
+                        <label for="password">Mot de passe: </label>
+                        <input type="password"
+                        id="password"
+                        name="password"
+                        minlength="8"
+                        maxlength="18"
+                        required>
+                    </div>
+
+                    <div>
+                        <input type="submit" 
+                        value="Se connecter"
+                        class="se-connecter">
+                    </div>
+                </form>
+                <a href="mes-rendez-vous.html" rel="Mes rendez-vous" class="lien-retour">Voir l'espace patient de démonstration</a>
+                <a href="index.html" rel="Accueil" class="lien-retour">← Retour à l'accueil</a>
+        </section>
+    </main>
+</body>
+</html>

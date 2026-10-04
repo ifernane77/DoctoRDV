@@ -1,87 +1,13 @@
+/* =========================================================
+   1. STYLE GENERAL DU SITE
+   ========================================================= */
 
-/* Partie image */
-.logo {
-    width: 180px;
-    height: auto;
-}
-
-.photo-medecin {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-/* style praticien.html */
-
-.indispo {
-    color: #B42318;
-    font-weight: 700;
-}
-
-/* header */
-.nom-site {
-        color: #064E5F;
-        font-size: 28px;
-        font-weight: 700;
-        letter-spacing: 1px;
-}
-
-nav a {
-    color: #064E5F;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 600;
-    margin-right: 20px;
-    padding: 8px 12px;
-    border-radius: 8px;
-    transition: 0,3s;
-}
-
-nav a:hover {
-    color: white;
-    background-color: #064E5F;
-}
-
-article a {
-    display: inline-block;
-    color: white;
-    background-color: #1E9E45;
-    text-decoration: none;
-    font-weight: 600;
-    padding: 10px 18px;
-    border-radius: 10px;
-    margin-top: 10px;
-    transition: 0.3s;
-}
-
-article a:hover {
-    background-color: #167A35;
-    transform: translateY(-2px);
-}
-
-/* main */
-.specialite {
-    color: #1E9E45;
-    font-size: 18px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-}
-
-aside {
-    background-color: white;
-    border-left: 4px solid #1E9E45;
-    padding: 15px;
-    margin: 20px auto;
-    max-width: 900px;
-    border-radius: 10px;
-}
-
-/* body */ 
+/* Corps de la page */
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: black;
     font-size: 16px;
+
     background: linear-gradient(
         135deg,
         #f8fafc 0%,
@@ -90,8 +16,13 @@ body {
     );
 
     min-height: 100vh;
-    line-height: 1,5;
+    line-height: 1.5;
 }
+
+
+/* =========================================================
+   2. TITRES
+   ========================================================= */
 
 h1 {
     color: #064E5F;
@@ -115,73 +46,291 @@ h3 {
     font-weight: 600;
 }
 
-#praticiens {
-    background-color: rgba(255, 255, 255, 0.75);
-    padding: 30px;
-    margin: 40px auto;
-    border-radius: 18px;
-    max-width: 1100px;
-    box-shadow: 0 8px 25px rgba(6, 78, 95, 0.10);
+
+/* =========================================================
+   3. IMAGES
+   ========================================================= */
+
+/* Logo principal */
+.logo {
+    width: 180px;
+    height: auto;
 }
 
-.fiche-praticien {
-    background-color: rgba(255, 255, 255, 0.80);
-    max-width: 900px;
-    margin: 35px auto;
-    padding: 30px;
-    border-radius: 18px;
-    box-shadow: 0 8px 25px rgba(6, 78, 95, 0.10);
+/* Photos des médecins */
+.photo-medecin {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
-.fiche-praticien h2 {
+
+/* =========================================================
+   4. HEADER ET NAVIGATION
+   ========================================================= */
+
+/* Nom du site */
+.nom-site {
     color: #064E5F;
     font-size: 28px;
     font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Liens du menu */
+nav a {
+    color: #064E5F;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+
+    margin-right: 20px;
+    padding: 8px 12px;
+
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+/* Survol des liens du menu */
+nav a:hover {
+    color: white;
+    background-color: #064E5F;
+}
+
+
+/* =========================================================
+   5. ELEMENTS GENERAUX DU MAIN
+   ========================================================= */
+
+/* Texte indiquant la spécialité du médecin */
+.specialite {
+    color: #1E9E45;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Bloc d'information */
+aside {
+    background-color: white;
+
+    border-left: 4px solid #1E9E45;
+    border-radius: 10px;
+
+    padding: 15px;
+    margin: 20px auto;
+
+    max-width: 900px;
+}
+
+
+/* =========================================================
+   6. PAGE ACCUEIL - LISTE DES PRATICIENS
+   ========================================================= */
+
+/* Conteneur général des praticiens */
+#praticiens {
+    background-color: rgba(255, 255, 255, 0.75);
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    padding: 30px;
+    margin: 40px auto;
+
+    border-radius: 50px;
+    max-width: 1100px;
+
+    box-shadow: 0 8px 25px rgba(6, 78, 95, 0.10);
+}
+
+/* Le titre prend toute la largeur du conteneur */
+#praticiens h2 {
+    width: 100%;
+}
+
+/* Une carte praticien */
+.liste-praticiens {
+    background-color: #beeff3;
+
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+
+    /* Les cartes se partagent l'espace disponible */
+    flex: 1;
+}
+
+/* Boutons / liens présents dans les articles */
+article a {
+    display: inline-block;
+
+    color: white;
+    background-color: #1E9E45;
+
+    text-decoration: none;
+    font-weight: 600;
+
+    padding: 10px 18px;
+    margin-top: 10px;
+
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+article a:hover {
+    background-color: #167A35;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   7. PAGE ACCUEIL - RECHERCHE D'UN PRATICIEN
+   ========================================================= */
+
+/* Zone contenant la recherche */
+.recherche-praticien {
+    max-width: 900px;
+    margin: 35px auto;
+}
+
+/* Formulaire permettant de filtrer les praticiens */
+.filtre-praticiens {
+    background-color: rgba(255, 255, 255, 0.80);
+
+    max-width: 1500px;
+
+    margin: 40px auto;
+    padding: 25px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(6, 78, 95, 0.10);
+
+    transition: 0.3s;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Liste déroulante du filtre */
+.filtre-praticiens select {
+    padding: 10px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Bouton du filtre */
+.filtre-praticiens button {
+    background-color: #1E9E45;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 10px 18px;
+
+    font-weight: 600;
+}
+
+/* Survol du bouton */
+.filtre-praticiens button:hover {
+    background-color: #167A35;
+}
+
+
+/* =========================================================
+   8. PAGE PRATICIEN.HTML
+   ========================================================= */
+
+/* Carte complète d'un praticien */
+.praticien {
+    max-width: 900px;
+
+    margin: 35px auto;
+    padding: 20px;
+
+    background-color: #ffffff;
+    border-radius: 18px;
+}
+
+/* Titre avec le nom du praticien */
+.fiche-praticien h2 {
+    color: #064E5F;
+
+    font-size: 28px;
+    font-weight: 700;
+
     margin-bottom: 5px;
 }
 
+/* Sous-titres de la fiche */
 .fiche-praticien h3 {
     color: #2F6673;
     font-size: 21px;
+
     margin-top: 25px;
     margin-bottom: 15px;
 }
 
+/* Liste des disponibilités */
 .fiche-praticien ul {
     list-style: none;
     padding: 0;
 }
 
+/* Une disponibilité */
 .fiche-praticien li {
     background-color: #F8FAFC;
+
     padding: 12px 16px;
     margin-bottom: 10px;
+
     border-left: 4px solid #1E9E45;
     border-radius: 8px;
 }
 
+/* Créneau indisponible */
+.indispo {
+    color: #B42318;
+    font-weight: 700;
+}
+
+/* Bouton de connexion de la fiche praticien */
 .fiche-praticien a {
     display: inline-block;
+
     background-color: #1E9E45;
     color: white;
+
     text-decoration: none;
     font-weight: 600;
+
     padding: 10px 18px;
     margin-top: 10px;
+
     border-radius: 10px;
     transition: 0.3s;
 }
 
 .fiche-praticien a:hover {
-    background-color: #167A35;
+    background-color: #b7e6f1;
     transform: translateY(-2px);
 }
 
+/* Lien permettant de revenir à la liste des praticiens */
 .lien-retour {
     display: block;
     width: fit-content;
+
     margin: 30px auto;
+
     color: #064E5F;
+
     text-decoration: none;
     font-weight: 600;
 }
@@ -190,8 +339,143 @@ h3 {
     text-decoration: underline;
 }
 
-/* lien footer */
 
+/* =========================================================
+   9. PAGE CONNEXION
+   ========================================================= */
+
+/* Bloc principal de connexion */
+.formulaire-connexion {
+    background-color: #b7e6f1;
+
+    max-width: 700px;
+
+    padding: 20px;
+    margin: auto;
+
+    border: 1px black solid;
+    border-radius: 18px;
+}
+
+/* Formulaire utilisateur */
+.connexion-utilisateur {
+    font-size: 20px;
+
+    border: none;
+
+    padding: 20px;
+
+    width: 100%;
+    max-width: 400px;
+
+    margin: 35px auto;
+}
+
+/* Labels E-mail et Mot de passe */
+.connexion-utilisateur label {
+    display: inline-block;
+    width: 160px;
+}
+
+/* Espacement entre les lignes du formulaire */
+.connexion-utilisateur div {
+    margin-bottom: 20px;
+}
+
+/* Logo de la page connexion */
+.logo-connexion {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+}
+
+/* Bouton Se connecter */
+.se-connecter {
+    background-color: #1E9E45;
+    color: white;
+
+    padding: 10px;
+
+    border: none;
+    border-radius: 8px;
+
+    font-weight: 800;
+}
+
+/* Survol du bouton */
+.se-connecter:hover {
+    background-color: #167A35;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   10. TABLEAU DES RENDEZ-VOUS
+   ========================================================= */
+
+/* Tableau général */
+table {
+    border-collapse: collapse;
+
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 35px auto;
+}
+
+/* Cellules et en-têtes */
+th,
+td {
+    border: 1px black solid;
+    padding: 10px;
+}
+
+/* Cellules du tableau */
+td {
+    text-align: center;
+    background-color: white;
+}
+
+/* En-têtes du tableau */
+th {
+    background-color: #167A35;
+    color: white;
+
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Rendez-vous confirmé */
+.statut-confirme {
+    background-color: #1E9E45;
+    color: white;
+    font-weight: bold;
+}
+
+/* Rendez-vous annulé */
+.statut-annule {
+    background-color: #B42318;
+    color: white;
+
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+/* =========================================================
+   11. VIDEO
+   ========================================================= */
+
+.video-presentation {
+
+}
+
+
+/* =========================================================
+   12. FOOTER
+   ========================================================= */
+
+/* Liens du pied de page */
 footer a {
     color: #064E5F;
     text-decoration: none;
@@ -201,7 +485,6 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
-
 /*
 ==========================================================================
                  MÉMO TECHNIQUE CSS — DoctoRDV

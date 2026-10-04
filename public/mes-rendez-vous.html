@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes rendez-vous — DoctoRDV</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <header>
+      <img src="images/logo-doctordv.png" alt="Logo DoctoRDV" class="logo" />
+
+      <p class="nom-site">DoctoRDV MediCentre Nova</p>
+
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="index.html#praticiens">Voir les praticiens</a>
+        <a href="connexion.html">Connexion</a>
+      </nav>
+    </header>
+
+    <main>
+        <aside>Espace patient fictif — Les rendez-vous affichés sont des données de démonstration.</aside>
+        <h1>Mes rendez-vous</h1>
+
+        <section>
+            <table>
+                <caption>Liste des rendez-vous</caption>
+                <thead>
+                    <tr>
+                        <th>praticien</th>
+                        <th>Spécialité</th>
+                        <th>Date</th>
+                        <th>Heure</th>
+                        <th>Statut</th>
+                        <th>Action</th>
+                    </tr> 
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Dr Khalid Asadi</td>
+                        <td>Médecine Générale</td>
+                        <td>05/10/2026</td>
+                        <td>09:00</td>
+                        <td class="statut-confirme">Confirmé</td>
+                        <td><button type="button">Annulé</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>Dr Thomas Rivière</td>
+                        <td>Pédiatrie</td>
+                        <td>08/10/2026</td>
+                        <td>14:00</td>
+                        <td class="statut-confirme">Confirmé</td>
+                        <td><button type="button">Annulé</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>Dr Sarah Fontaine</td>
+                        <td>Dermatologie</td>
+                        <td>12/10/2026</td>
+                        <td>10:00</td>
+                        <td class="statut-annule">Annulé</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        
+    </main>
+</body>
+</html>
