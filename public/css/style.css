@@ -377,6 +377,13 @@ article a:hover {
     width: 160px;
 }
 
+.connexion-utilisateur input {
+    padding: 7px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px black solid;
+}
+
 /* Espacement entre les lignes du formulaire */
 .connexion-utilisateur div {
     margin-bottom: 20px;
