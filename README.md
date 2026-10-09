@@ -32,7 +32,7 @@ La première version doit permettre :
 - notifications SMS ou e-mail automatiques ;
 - téléconsultation ;
 - synchronisation avec un agenda externe ;
-- application mobile native ;
+- application mobile native (extension distincte éventuelle, hors V1) ;
 - gestion de dossiers médicaux ou de données de santé réelles.
 
 ## Technologies prévues
@@ -84,3 +84,13 @@ La phase de cadrage, d’analyse fonctionnelle, de conception initiale des donn�
 - captures de l’application en fonctionnement ;
 - documentation d’installation et d’utilisation mise à jour ;
 - fiche descriptive et scénario de démonstration orale.
+
+## Périmètre E6 et feuille de route (session 2027)
+
+**Positionnement : réalisation E6 principale — développement applicatif web.** Le projet devra constituer une application démontrable, testée, documentée et susceptible d'évoluer pendant l'épreuve. Les fonctionnalités ci-dessous sont des objectifs, pas des fonctions déjà disponibles.
+
+1. **MVP web prioritaire :** concevoir la base MySQL avec des données fictives, développer les écrans et traitements PHP essentiels (consultation des praticiens et créneaux, réservation et annulation par un patient), puis vérifier les règles d'accès.
+2. **Consolidation :** enrichir la gestion des créneaux et l'administration selon les notions maîtrisées et le temps disponible ; rédiger tests, procédure d'installation, preuves et scénario de démonstration.
+3. **Extension facultative : Flutter/Dart.** Une application mobile DoctoRDV pourra être étudiée après la stabilisation du MVP web, idéalement au moyen d'une API côté serveur. **Aucun développement Flutter n'est encore réalisé ni requis pour le MVP E6.**
+
+L'avancement doit rester synchronisé avec le code, les tests et les captures présents dans le dépôt. Les évolutions seront décidées au rythme des cours de BTS SIO SLAM suivis à distance via Studi.
