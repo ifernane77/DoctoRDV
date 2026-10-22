@@ -30,7 +30,7 @@ L’objectif est de distinguer clairement :
 | Moyenne | Annulation | Permettre au patient d’annuler un rendez-vous | Interface préparée — fonctionnalité non développée |
 | Moyenne | Planning praticien | Permettre au praticien de consulter ses rendez-vous | Pas commencé |
 | Moyenne | Administration | Gérer les praticiens, spécialités, créneaux et rendez-vous | Pas commencé |
-| Moyenne | Responsive | Adapter correctement l’interface aux différentes tailles d’écran | Pas commencé |
+| Moyenne | Responsive | Adapter correctement l’interface aux différentes tailles d’écran | Terminé — adaptation HTML/CSS |
 | Moyenne | Base de données MySQL | Créer la base de données réelle de l’application | Pas commencé |
 | Moyenne | Connexion PHP / MySQL | Connecter l’application à la base de données | Pas commencé |
 | Moyenne | Tests fonctionnels | Vérifier les principales fonctionnalités de l’application | Pas commencé |
@@ -99,7 +99,7 @@ Les fonctionnalités suivantes restent hors du périmètre prévu de la version 
 | Créer la page « Mes rendez-vous » | Terminé — prototype statique | Non renseignée à l’époque | 04/10/2026 | Commits `11fc7f7` et `3508fa6` |
 | Finaliser les interfaces HTML/CSS de la semaine 16 | Terminé | Non renseignée à l’époque | 04/10/2026 | Commit `3508fa6` |
 | Préciser le périmètre E6 | Terminé | Non renseignée à l’époque | 09/10/2026 | Commit `b775c8a` |
-| Adapter l’interface au responsive | Pas commencé | À définir | — | — |
+| Adapter l’interface au responsive | Terminé | Non renseignée avant réalisation | 22/10/2026 | Commit '13d6a53'
 | Créer la base MySQL | Pas commencé | À définir | — | — |
 | Connecter PHP à MySQL | Pas commencé | À définir | — | — |
 | Développer l’authentification réelle | Pas commencé | À définir | — | — |
