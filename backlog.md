@@ -166,3 +166,21 @@ Une fois la tâche terminée :
 | Créer la base MySQL | Terminé | 20/10/2026 | 22/10/2026 |
 
 Cela permettra de comparer le travail prévu au travail réellement réalisé et de conserver une trace de la planification du projet.
+
+## Phase 2 planifiée — client lourd DoctoRDV Secrétariat (Java/JavaFX)
+
+Cette phase complète la V1 Web ; elle ne remplace ni les fonctionnalités Web ni les tâches déjà réalisées. **Toutes les lignes suivantes sont à faire**, et leurs dates seront fixées avant développement, conformément à la règle de suivi du projet.
+
+| Priorité | Tâche | Statut | Dépendance |
+|---|---|---|---|
+| Haute | Stabiliser le parcours Web réservation/annulation et les rôles | À faire | SQL, PHP, PDO |
+| Haute | Concevoir les endpoints API PHP sécurisés et les tests | À faire | Parcours Web fonctionnel, cours API |
+| Haute | Ajouter le rôle `secretaire` et ses habilitations côté serveur | À faire | Authentification et contrôles d'accès |
+| Haute | Concevoir les écrans JavaFX : connexion, planning, recherche | À faire | Cours Java/JavaFX |
+| Haute | Consulter les plannings et créneaux via l'API | À faire | API et client JavaFX |
+| Haute | Créer et annuler un rendez-vous depuis le client lourd | À faire | API et règles métier |
+| Moyenne | Déplacer un rendez-vous sans conflit de créneaux | À faire | Transactions et tests métier |
+| Haute | Tester les droits, erreurs, doublons et échanges Web/client lourd | À faire | V1 et V2 opérationnelles |
+| Moyenne | Documenter l'installation du client lourd et les preuves E6 | À faire | V2 testée |
+
+**Périmètre retenu :** pas d'application mobile DoctoRDV ; le développement Flutter est envisagé dans Light of Knowledge. Le client lourd n'est pas commencé et ne doit jamais être marqué terminé sur la seule base de sa documentation.
