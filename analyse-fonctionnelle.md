@@ -77,3 +77,24 @@ L’administrateur gère les données nécessaires à l’application : praticie
 ## Critères de réussite fonctionnels
 
 La V1 est considérée comme exploitable lorsque les parcours de réservation et d’annulation sont réalisés avec des données fictives, que les accès sont contrôlés selon le rôle, qu’un doublon de réservation est empêché et que les résultats sont vérifiés dans un cahier de tests.
+
+## Périmètre V2 prévu — DoctoRDV Secrétariat (client lourd)
+
+**Nouvel acteur : secrétaire médicale fictive.** La secrétaire utilise un logiciel de bureau Java/JavaFX installé sur un poste de travail. Elle s'authentifie avec un compte `secretaire` et accède uniquement aux opérations nécessaires à l'accueil et à la gestion des rendez-vous.
+
+| Fonctionnalité V2 | Secrétaire |
+|---|---|
+| Consulter le planning des praticiens autorisés | Oui |
+| Rechercher un patient fictif | Oui |
+| Consulter les disponibilités | Oui |
+| Réserver pour un patient fictif | Oui |
+| Déplacer un rendez-vous | Oui, sous contrôle des disponibilités |
+| Annuler un rendez-vous | Oui, selon habilitation |
+| Gérer les comptes et rôles | Non |
+| Accéder à des données médicales réelles | Non |
+
+**Parcours secrétaire :** connexion → sélection du praticien et du patient fictif → choix d'un créneau disponible → confirmation via API → affichage du rendez-vous dans le logiciel et sur le Web. Un déplacement doit libérer l'ancien créneau et réserver le nouveau sans double réservation ; les opérations doivent être contrôlées côté serveur et journalisées.
+
+**Règles communes :** autorisation vérifiée par l'API pour chaque action, mots de passe hachés, validation des entrées, accès aux seules données fictives nécessaires, absence de connexion directe du client lourd au SGBD. Les droits précis de la secrétaire seront affinés au moment du développement et des tests.
+
+**Statut :** extension uniquement spécifiée ; les écrans JavaFX, les endpoints API, l'authentification et les tests V2 ne sont pas encore développés. La V1 Web reste prioritaire.
