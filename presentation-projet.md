@@ -4,7 +4,7 @@
 
 MediCentre Nova est une maison médicale fictive. La prise de rendez-vous est actuellement gérée principalement par téléphone, ce qui peut entraîner des erreurs de planning, une mauvaise visibilité sur les disponibilités et une perte de temps pour les patients comme pour les praticiens.
 
-DoctoRDV est une application web fictive conçue pour centraliser cette gestion. Elle est réalisée comme support principal de l’épreuve E6 du BTS SIO, option SLAM.
+DoctoRDV est un système applicatif fictif conçu pour centraliser cette gestion : une application Web (V1), puis un client lourd de secrétariat (V2). Elle est réalisée comme support principal de l’épreuve E6 du BTS SIO, option SLAM.
 
 ## Problème traité
 
@@ -60,3 +60,9 @@ DoctoRDV n’est pas une plateforme médicale réelle. La V1 exclut le paiement,
 ## Technologies
 
 L’application sera développée avec PHP, MySQL, HTML, CSS, Bootstrap et, si besoin, JavaScript simple. Elle sera testée localement avec Laragon et versionnée avec Git et GitHub.
+
+## Extension prévue — client lourd de secrétariat (V2)
+
+Après la mise en service du parcours Web, une **application de bureau Java/JavaFX** sera destinée à la secrétaire de MediCentre Nova. Elle pourra, après authentification : consulter les plannings autorisés, rechercher des patients fictifs, prendre, déplacer et annuler des rendez-vous pour leur compte, et consulter les disponibilités. Ces opérations seront soumises aux droits du rôle `secretaire` et journalisées.
+
+La V2 utilisera une **API PHP sécurisée** commune au site Web, reliée à la même base MySQL/MariaDB. Aucun accès direct à la base depuis le client JavaFX. La V2 est un **objectif de développement futur**, pas une fonctionnalité déjà livrée. L'application mobile Flutter appartient au projet Light of Knowledge et n'est pas prévue ici.
