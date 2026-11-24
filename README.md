@@ -91,6 +91,12 @@ La phase de cadrage, d’analyse fonctionnelle, de conception initiale des donn�
 
 1. **MVP web prioritaire :** concevoir la base MySQL avec des données fictives, développer les écrans et traitements PHP essentiels (consultation des praticiens et créneaux, réservation et annulation par un patient), puis vérifier les règles d'accès.
 2. **Consolidation :** enrichir la gestion des créneaux et l'administration selon les notions maîtrisées et le temps disponible ; rédiger tests, procédure d'installation, preuves et scénario de démonstration.
-3. **Extension facultative : Flutter/Dart.** Une application mobile DoctoRDV pourra être étudiée après la stabilisation du MVP web, idéalement au moyen d'une API côté serveur. **Aucun développement Flutter n'est encore réalisé ni requis pour le MVP E6.**
+3. **Phase 2 prévue — client lourd secrétariat Java/JavaFX :** après stabilisation du MVP web et apprentissage de Java, développer un logiciel de bureau destiné à la secrétaire, utilisant une API PHP sécurisée et les mêmes données que le site. **Cette phase est planifiée, non réalisée.**
 
 L'avancement doit rester synchronisé avec le code, les tests et les captures présents dans le dépôt. Les évolutions seront décidées au rythme des cours de BTS SIO SLAM suivis à distance via Studi.
+
+## Extension E6 prévue — DoctoRDV Secrétariat
+
+Le périmètre global comprend deux interfaces complémentaires : **V1 Web** (patients, praticiens, administration) puis **V2 client lourd Java/JavaFX** (secrétaire). La V2 doit permettre à une secrétaire authentifiée de consulter les plannings autorisés, rechercher un patient fictif, créer, déplacer et annuler un rendez-vous, et gérer les disponibilités dans le cadre de ses habilitations. Le client lourd échange avec une **API PHP sécurisée** ; il n'accède pas directement à la base MariaDB/MySQL. Les deux interfaces partagent les mêmes règles métier, notamment l'interdiction des doubles réservations.
+
+**Ordre de réalisation :** SQL et PHP → MVP Web et contrôles d'accès → API et tests → Java/JavaFX après les cours correspondants → tests croisés et démonstration. Aucun client lourd ni API n'est développé à ce stade. Le développement mobile Flutter est réservé au projet distinct Light of Knowledge et n'est pas prévu pour DoctoRDV.
