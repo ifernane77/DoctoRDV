@@ -31,7 +31,7 @@ L’objectif est de distinguer clairement :
 | Moyenne | Planning praticien | Permettre au praticien de consulter ses rendez-vous | Pas commencé |
 | Moyenne | Administration | Gérer les praticiens, spécialités, créneaux et rendez-vous | Pas commencé |
 | Moyenne | Responsive | Adapter correctement l’interface aux différentes tailles d’écran | Terminé — adaptation HTML/CSS |
-| Moyenne | Base de données MySQL | Créer la base de données réelle de l’application | En cours — base `doctordv` et table `roles` créées ; autres tables à faire |
+| Moyenne | Base de données MySQL | Créer la base de données réelle de l’application | Terminé — schéma MariaDB V1 testé localement le 24/11/2026 |
 | Moyenne | Connexion PHP / MySQL | Connecter l’application à la base de données | Pas commencé |
 | Moyenne | Tests fonctionnels | Vérifier les principales fonctionnalités de l’application | Pas commencé |
 
@@ -100,7 +100,7 @@ Les fonctionnalités suivantes restent hors du périmètre prévu de la version 
 | Finaliser les interfaces HTML/CSS de la semaine 16 | Terminé | Non renseignée à l’époque | 04/10/2026 | Commit `3508fa6` |
 | Préciser le périmètre E6 | Terminé | Non renseignée à l’époque | 09/10/2026 | Commit `b775c8a` |
 | Adapter l’interface au responsive | Terminé | Non renseignée avant réalisation | 22/10/2026 | Commit '13d6a53' |
-| Créer la base MySQL | En cours — première table créée | Non renseignée avant exécution | — | Voir SQL-01 |
+| SQL-01 — Étendre le schéma MariaDB V1 Web aux sept tables | Terminé et testé localement — 7 tables, 9 clés étrangères, 6 contraintes d’unicité ciblées, données fictives vérifiées. Réimport sans doublon supplémentaire (2 créneaux, 1 rendez-vous, 1 entrée de journal) | Non renseignée avant préparation | 24/11/2026 | `database/doctordv.sql`, `tests/sql-schema.sql`, `preuves/sql-01/` |
 | SQL-01 — Créer la base et la table `roles` | Réalisé localement — preuves à vérifier | Non renseignée avant exécution | 24/11/2026 | `database/doctordv.sql`, `tests/sql-roles.sql`, `preuves/sql-01/` |
 | Connecter PHP à MySQL | Pas commencé | À définir | — | — |
 | Développer l’authentification réelle | Pas commencé | À définir | — | — |
@@ -139,7 +139,7 @@ Les prochaines évolutions seront réalisées en fonction des notions étudiées
 
 1. terminer les notions HTML/CSS nécessaires ;
 2. travailler le responsive lorsque la notion aura été étudiée ;
-3. créer réellement la base de données MySQL ;
+3. décider si un créneau peut être rouvert après annulation tout en conservant le rendez-vous annulé ;
 4. connecter l’application à la base avec PHP ;
 5. développer l’authentification ;
 6. développer le filtrage dynamique des praticiens ;
