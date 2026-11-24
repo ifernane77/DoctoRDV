@@ -31,7 +31,7 @@ L’objectif est de distinguer clairement :
 | Moyenne | Planning praticien | Permettre au praticien de consulter ses rendez-vous | Pas commencé |
 | Moyenne | Administration | Gérer les praticiens, spécialités, créneaux et rendez-vous | Pas commencé |
 | Moyenne | Responsive | Adapter correctement l’interface aux différentes tailles d’écran | Terminé — adaptation HTML/CSS |
-| Moyenne | Base de données MySQL | Créer la base de données réelle de l’application | Pas commencé |
+| Moyenne | Base de données MySQL | Créer la base de données réelle de l’application | En cours — base `doctordv` et table `roles` créées ; autres tables à faire |
 | Moyenne | Connexion PHP / MySQL | Connecter l’application à la base de données | Pas commencé |
 | Moyenne | Tests fonctionnels | Vérifier les principales fonctionnalités de l’application | Pas commencé |
 
@@ -99,8 +99,9 @@ Les fonctionnalités suivantes restent hors du périmètre prévu de la version 
 | Créer la page « Mes rendez-vous » | Terminé — prototype statique | Non renseignée à l’époque | 04/10/2026 | Commits `11fc7f7` et `3508fa6` |
 | Finaliser les interfaces HTML/CSS de la semaine 16 | Terminé | Non renseignée à l’époque | 04/10/2026 | Commit `3508fa6` |
 | Préciser le périmètre E6 | Terminé | Non renseignée à l’époque | 09/10/2026 | Commit `b775c8a` |
-| Adapter l’interface au responsive | Terminé | Non renseignée avant réalisation | 22/10/2026 | Commit '13d6a53'
-| Créer la base MySQL | Pas commencé | À définir | — | — |
+| Adapter l’interface au responsive | Terminé | Non renseignée avant réalisation | 22/10/2026 | Commit '13d6a53' |
+| Créer la base MySQL | En cours — première table créée | Non renseignée avant exécution | — | Voir SQL-01 |
+| SQL-01 — Créer la base et la table `roles` | Réalisé localement — preuves à vérifier | Non renseignée avant exécution | 24/11/2026 | `database/doctordv.sql`, `tests/sql-roles.sql`, `preuves/sql-01/` |
 | Connecter PHP à MySQL | Pas commencé | À définir | — | — |
 | Développer l’authentification réelle | Pas commencé | À définir | — | — |
 | Développer le filtre par spécialité | Pas commencé | À définir | — | — |
@@ -125,6 +126,8 @@ Les fonctionnalités suivantes restent hors du périmètre prévu de la version 
 | 04/10/2026 | Développement des interfaces de la semaine 16 | Filtre par spécialité, connexion et espace patient statique ajoutés |
 | 04/10/2026 | Corrections des interfaces | Interfaces HTML/CSS corrigées et finalisées |
 | 09/10/2026 | Mise à jour du périmètre E6 | Limites du projet précisées |
+| 24/11/2026 | SQL-01 — Création de la base `doctordv` sous MariaDB, création de `roles` et insertion des trois rôles fictifs | Requête `SELECT` exécutée et résultat confirmé par l'utilisateur ; scripts SQL enregistrés, captures à vérifier |
+
 
 ---
 
@@ -166,3 +169,4 @@ Une fois la tâche terminée :
 | Créer la base MySQL | Terminé | 20/10/2026 | 22/10/2026 |
 
 Cela permettra de comparer le travail prévu au travail réellement réalisé et de conserver une trace de la planification du projet.
+
